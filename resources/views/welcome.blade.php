@@ -293,7 +293,7 @@
             </div>
         </section>
 
-        <section id="projects" class="relative min-h-screen bg-slate-950 py-20 px-4 sm:px-6 lg:px-8">
+        <section id="projects " class="relative min-h-screen bg-slate-950 py-20 px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-7xl">
                 <div class="reveal mb-16 text-center">
                     <h2 class="mb-6 text-3xl font-bold md:text-5xl">Featured Projects</h2>
