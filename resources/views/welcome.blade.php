@@ -302,7 +302,9 @@
 
                 <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
                     <article class="reveal tilt-card overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                        <div class="h-44 bg-gradient-to-br from-blue-500/30 to-purple-500/30"></div>
+                        <div class="h-44 bg-gradient-to-br from-blue-500/30 to-purple-500/30">
+                            <img src="{{asset('medicare logo.png')}}" alt="medicare">
+                        </div>
                         <div class="space-y-4 border-t border-white/10 bg-slate-950/60 p-6">
                             <h3 class="text-xl font-bold">MediCare E-Commerce</h3>
                             <p class="text-sm text-gray-400">Responsive e-commerce platform with authentication, payments, admin dashboard, and inventory management.</p>
@@ -315,7 +317,9 @@
                     </article>
 
                     <article class="reveal tilt-card overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                        <div class="h-44 bg-gradient-to-br from-indigo-500/30 to-pink-500/30"></div>
+                        <div class="h-44 bg-gradient-to-br from-indigo-500/30 to-pink-500/30">
+                            <img src="{{asset('logo1.png')}}" alt="">
+                        </div>
                         <div class="space-y-4 border-t border-white/10 bg-slate-950/60 p-6">
                             <h3 class="text-xl font-bold">Library Management System</h3>
                             <p class="text-sm text-gray-400">Complete Laravel CRUD system with Admin and User panels for books, borrowing, and notifications.</p>
