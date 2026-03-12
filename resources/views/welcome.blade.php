@@ -310,7 +310,7 @@
                             <p class="text-sm text-gray-400">Responsive e-commerce platform with authentication, payments, admin dashboard, and inventory management.</p>
                             <p class="text-xs text-gray-300">PHP • HTML • CSS • JavaScript</p>
                             <div class="flex gap-4">
-                                <a href="https://github.com/huxi786/My-first-project-Mystic-mall" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
+                                <a href="https://github.com/NaveedRustam/medicare-ecommerce" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
                                 <button type="button" data-project="mystic" class="open-project-modal text-sm font-medium text-white transition hover:text-purple-400">Demo</button>
                             </div>
                         </div>
@@ -332,14 +332,16 @@
                     </article>
 
                     <article class="reveal tilt-card overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-                        <div class="h-44 bg-gradient-to-br from-emerald-500/30 to-teal-500/30"></div>
+                        <div class="h-44 bg-gradient-to-br from-emerald-500/30 to-teal-500/30">
+                            <img src="{{asset('book-mart.png')}}" alt="">
+                        </div>
                         <div class="space-y-4 border-t border-white/10 bg-slate-950/60 p-6">
-                            <h3 class="text-xl font-bold">Interactive Weather App</h3>
-                            <p class="text-sm text-gray-400">Real-time weather dashboard with location search, API integration, and input validation handling.</p>
-                            <p class="text-xs text-gray-300">HTML • JavaScript • CSS • API</p>
+                            <h3 class="text-xl font-bold">E-Book Mart</h3>
+                            <p class="text-sm text-gray-400">E-Commerce website with Real-time dashboard with search, API integration, and input validation handling .</p>
+                            <p class="text-xs text-gray-300"> Laravel • Blade • PHP • MySQL • JavaScript • CSS • API</p>
                             <div class="flex gap-4">
-                                <a href="https://github.com/huxi786/weather-app" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
-                                <a href="https://huxi786.github.io/weather-app/" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-purple-400">Demo</a>
+                                <a href="https://github.com/NaveedRustam/SmartShop" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
+                                <a href="https://github.com/NaveedRustam/SmartShop" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-purple-400">Demo</a>
                             </div>
                         </div>
                     </article>
@@ -347,10 +349,11 @@
                     <article class="reveal tilt-card overflow-hidden rounded-2xl border border-white/10 bg-white/5">
                         <div class="h-44 bg-gradient-to-br from-red-500/30 to-blue-500/30"></div>
                         <div class="space-y-4 border-t border-white/10 bg-slate-950/60 p-6">
-                            <h3 class="text-xl font-bold">GMass Bulk Emailer</h3>
-                            <p class="text-sm text-gray-400">Bulk email dispatch application built in Laravel with queueing and contact management features.</p>
-                            <p class="text-xs text-gray-300">Laravel • PHP • Blade • MySQL</p>
-                            <a href="https://github.com/huxi786/gmass-app" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
+                            <h3 class="text-xl font-bold">Truck Dispatch System</h3>
+                            <p class="text-sm text-gray-400">Truck dispatch application built in Laravel with queueing and contact management features.</p>
+                            <p class="text-xs text-gray-300">HTML • CSS • JavaScript • PHP • Laravel • Blade • MySQL</p>
+                            <a href="https://github.com/NaveedRustam/Truck-Dispatch-System" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-blue-400">Code</a>
+                            <a href="https://github.com/NaveedRustam/Truck-Dispatch-System" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-white transition hover:text-purple-400">Demo</a>
                         </div>
                     </article>
 
@@ -392,12 +395,12 @@
                                     <div class="space-y-4">
                                         <div class="rounded-xl p-3 hover:bg-white/5">
                                             <p class="text-sm text-gray-400"><i class="fa-regular fa-envelope mr-2"  aria-hidden="true"></i>Email Me</p>
-                                            <a id="contact-email-link" class="break-all text-base font-semibold text-blue-400 no-underline hover:underline sm:text-lg" href="https://mail.google.com/mail/u/0/#inbox?compose=new" data-click-response="Opening email composer...">naveedrustam02@gmail.com</a>
+                                            <a id="contact-email-link" class="break-all text-base font-semibold text-blue-400 no-underline hover:underline sm:text-lg" href="https://mail.google.com/mail/?view=cm&fs=1&to=naveedrustam02@gmail.com" target="_blank" rel="noopener noreferrer" data-click-response="Opening email composer...">naveedrustam02@gmail.com</a>
                                           
                                         </div>
                                         <div class="rounded-xl p-3 hover:bg-white/5">
                                             <p class="text-sm text-gray-400"><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>Call Me</p>
-                                            <a id="contact-phone-link" class="text-base font-semibold text-emerald-400 no-underline hover:underline sm:text-lg" href="tel:+923091509256" data-click-response="Opening dialer...">0309 1509256</a>
+                                            <a id="contact-phone-link" class="text-base font-semibold text-emerald-400 no-underline hover:underline sm:text-lg" href="tel:+923091509256" target="_blank" rel="noopener noreferrer" data-click-response="Opening dialer...">0309 1509256</a>
                                         </div>
                                         <div class="rounded-xl p-3 hover:bg-white/5">
                                             <p class="text-sm text-gray-400"><i class="fa-solid fa-location-dot mr-2" aria-hidden="true"></i>Location</p>
@@ -425,7 +428,8 @@
 
                     <div class="reveal col-span-1 lg:col-span-7">
                         <div class="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl sm:p-8 md:p-10">
-                            <form id="contact-form" class="space-y-6">
+                            <form id="contact-form" method="POST" action="{{ route('contact.send') }}" class="space-y-6">
+                                @csrf
                                 <div class="grid gap-6 md:grid-cols-2">
                                     <div class="space-y-2">
                                         <label for="name" class="ml-1 text-sm font-medium text-gray-300">Your Name</label>
@@ -442,7 +446,7 @@
                                     <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..." class="w-full resize-none rounded-xl border border-white/10 bg-slate-950/50 px-4 py-3 text-white outline-none transition placeholder:text-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
                                 </div>
 
-                                <p id="form-status" class="hidden rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-center text-sm font-medium text-green-400"></p>
+                                <p id="form-status" class="{{ session('contact_status') ? '' : 'hidden' }} rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-center text-sm font-medium text-green-400">{{ session('contact_status') }}</p>
 
                                 <button type="submit" class="w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-8 py-4 font-bold text-white shadow-lg shadow-blue-500/25 transition hover:-translate-y-1 hover:from-blue-500 hover:to-cyan-500">
                                     <i class="fa-solid fa-paper-plane mr-2" aria-hidden="true"></i>Send Message
@@ -454,7 +458,7 @@
             </div>
         </section>
 
-        <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950 py-6">
+        <footer class="relative overflow-hidden border-t border-white/10 bg-slate-950 py-2">
             <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.16),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,0.14),transparent_40%)]"></div>
             <div class="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="p-8 ">
@@ -517,7 +521,7 @@
                             <div class="mt-4 flex gap-3">
                                 <a href="https://github.com/NaveedRustam" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/5 text-gray-300 transition hover:bg-white/10 hover:text-white"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
                                 <a href="https://www.linkedin.com/in/naveedrustam/" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/5 text-gray-300 transition hover:bg-white/10 hover:text-white"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                                <a href="https://mail.google/mail/naveedrustam02@gmail.com/u/0/#inbox " target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/5 text-gray-300 transition hover:bg-white/10 hover:text-white"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=naveedrustam02@gmail.com" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/5 text-gray-300 transition hover:bg-white/10 hover:text-white"><i class="fa-regular fa-envelope" aria-hidden="true"></i></a>
                                 <a href="https://wa.me/923091509256" target="_blank" rel="noopener noreferrer" class="grid h-10 w-10 place-items-center rounded-md border border-white/10 bg-white/5 text-gray-300 transition hover:bg-white/10 hover:text-white"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -532,27 +536,10 @@
         </footer>
     </main>
 
-    <button id="scroll-top-button" type="button" aria-label="Back to top" class="fixed bottom-8 right-8 z-50 hidden rounded-2xl border border-white/10 bg-blue-600 p-4 text-white shadow-lg transition hover:bg-blue-700 ">
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    <button id="scroll-top-button" type="button" aria-label="Back to top" class="fixed bottom-8 right-8 z-50 hidden rounded-xl border border-white/10 bg-blue-600 p-3 text-white shadow-lg transition hover:bg-blue-700 ">
+       <i class="fa-solid fa-angle-up"></i>
     </button>
 
-    <div id="project-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-        <div class="modal-panel w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-slate-900 shadow-2xl">
-            <div class="flex items-center justify-between border-b border-white/10 p-5">
-                <h3 id="project-modal-title" class="text-xl font-bold text-white">Project</h3>
-                <button id="project-modal-close" type="button" class="rounded-full p-2 text-gray-400 transition hover:bg-white/10 hover:text-white">
-                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="relative aspect-video bg-black">
-                <img id="project-modal-image" src="{{asset('Naveed-image.png')}}" alt="Project slide" class="h-full w-full object-contain">
-                <button id="project-modal-prev" type="button" class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-blue-500"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
-                <button id="project-modal-next" type="button" class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-blue-500"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-                <p id="project-modal-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-3 py-1 text-xs text-white">1 / 1</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950"></div>
+    @include('partials.project-modal')
 </body>
 </html>

@@ -538,46 +538,110 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    contactPhoneLink?.addEventListener('click', (event) => {
+    const isDesktop = !/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+
+    if (contactPhoneLink) {
         const phoneHref = contactPhoneLink.getAttribute('href') || '';
         const phoneNumber = phoneHref.replace('tel:', '');
-        const isDesktop = !/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+        const sanitizedPhone = phoneNumber.replace(/\D+/g, '');
+        const desktopHref = contactPhoneLink.dataset.desktopHref || `https://web.whatsapp.com/send?phone=${sanitizedPhone}`;
 
-        if (!isDesktop) {
+        if (isDesktop) {
+            contactPhoneLink.setAttribute('href', desktopHref);
+            contactPhoneLink.setAttribute('target', '_blank');
+            contactPhoneLink.setAttribute('rel', 'noopener noreferrer');
+            contactPhoneLink.dataset.clickResponse = 'Opening call/chat in a new tab...';
+        } else {
+            contactPhoneLink.setAttribute('href', `tel:${phoneNumber}`);
+            contactPhoneLink.removeAttribute('target');
+            contactPhoneLink.removeAttribute('rel');
+            contactPhoneLink.dataset.clickResponse = 'Opening dialer...';
+        }
+
+        contactPhoneLink.addEventListener('click', () => {
+            if (!isDesktop) {
+                return;
+            }
+
+            if (navigator.clipboard?.writeText) {
+                navigator.clipboard.writeText(phoneNumber).catch(() => { });
+            }
+
+            if (contactClickStatus) {
+                contactClickStatus.textContent = `Opened call/chat in a new tab. Number copied: ${phoneNumber}`;
+                contactClickStatus.classList.remove('hidden');
+            }
+        });
+    }
+
+    const setFormStatus = (message, tone = 'success') => {
+        if (!formStatus) {
             return;
         }
 
-        event.preventDefault();
+        formStatus.classList.remove(
+            'hidden',
+            'border-green-500/20',
+            'bg-green-500/10',
+            'text-green-400',
+            'border-red-500/20',
+            'bg-red-500/10',
+            'text-red-400',
+            'border-blue-500/20',
+            'bg-blue-500/10',
+            'text-blue-300',
+        );
 
-        if (navigator.clipboard?.writeText) {
-            navigator.clipboard.writeText(phoneNumber).catch(() => { });
+        if (tone === 'error') {
+            formStatus.classList.add('border-red-500/20', 'bg-red-500/10', 'text-red-400');
+        } else if (tone === 'pending') {
+            formStatus.classList.add('border-blue-500/20', 'bg-blue-500/10', 'text-blue-300');
+        } else {
+            formStatus.classList.add('border-green-500/20', 'bg-green-500/10', 'text-green-400');
         }
 
-        if (contactClickStatus) {
-            contactClickStatus.textContent = `Dialer may not be available on desktop. Number copied: ${phoneNumber}`;
-            contactClickStatus.classList.remove('hidden');
-        }
-    });
+        formStatus.textContent = message;
+    };
 
-    contactForm?.addEventListener('submit', (event) => {
+    contactForm?.addEventListener('submit', async (event) => {
         event.preventDefault();
 
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const action = contactForm.getAttribute('action') || '/contact';
         const formData = new FormData(contactForm);
-        const name = (formData.get('name') || '').toString().trim();
-        const email = (formData.get('email') || '').toString().trim();
-        const message = (formData.get('message') || '').toString().trim();
         const fallbackEmail = (contactEmailLink?.textContent || '').trim() || 'naveedrustam02@gmail.com';
 
-        const subject = encodeURIComponent(`Contact from ${name}`);
-        const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
+        submitButton?.setAttribute('disabled', 'disabled');
+        submitButton?.classList.add('cursor-not-allowed', 'opacity-70');
+        setFormStatus('Sending your message...', 'pending');
 
-        formStatus.textContent = 'Opening your email client...';
-        formStatus.classList.remove('hidden');
-        window.location.href = `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+                body: formData,
+            });
 
-        window.setTimeout(() => {
-            formStatus.textContent = `If nothing opened, email me directly at ${fallbackEmail}`;
-        }, 1800);
+            const payload = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                const validationErrors = payload?.errors ? Object.values(payload.errors).flat() : [];
+                const firstError = validationErrors[0] || payload?.message || 'Message could not be sent.';
+                throw new Error(firstError);
+            }
+
+            setFormStatus(payload?.message || 'Message sent successfully.', 'success');
+            contactForm.reset();
+        } catch (error) {
+            const baseError = error?.message || 'Something went wrong. Please try again.';
+            setFormStatus(`${baseError} If nothing opened, email me directly at ${fallbackEmail}`, 'error');
+        } finally {
+            submitButton?.removeAttribute('disabled');
+            submitButton?.classList.remove('cursor-not-allowed', 'opacity-70');
+        }
     });
 
     const footerNewsletterForm = document.getElementById('footer-newsletter-form');
